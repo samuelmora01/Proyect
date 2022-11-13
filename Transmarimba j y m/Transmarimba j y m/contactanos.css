@@ -1,0 +1,115 @@
+:root {
+    --negro:#000;
+    --blanco:#fff;
+	--bgcolor:rgb(52, 52, 52);
+	--hovercolor:rgb(23, 23, 23);
+    --principal:rgb(214, 0, 0);
+    --gris:#ccc;
+	--azul:rgb(0, 17, 255);
+	--width-collapsed:5rem;
+	--width:30rem;
+	--paddding:1rem;
+	--azulprincipal:rgb(7, 0, 54);
+}
+
+.contacto h2{
+    text-align: center;
+    color: var(--azulClaro);
+    font-size: 5rem;
+}
+
+@media(min-width: 768px) {
+    .contenido-contacto{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+.informacion-contacto{
+    background-image: url(./img/bg.png  );
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: -1;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+@media(min-width: 768px) {
+    .informacion-contacto{
+        height: 100vh;
+    }
+}
+.informacion-contacto::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: -1;
+}
+.informacion-contacto h3{
+    font-size: 4rem;
+    text-align: center;
+}
+.informacion-contacto p{
+    font-size: 2rem;
+}
+.informacion-contacto h3, .informacion-contacto p{
+    color: var(--blanco);
+}
+.formulario-contacto{
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--azulprincipal);
+}
+
+.input-contacto label{
+    color: var(--blanco);
+    font-family: var(--parrafos);
+    display: block;
+    margin: 1rem 0;
+    font-weight: bold;
+}
+.input-contacto input{
+    padding: 1.2rem 1rem;
+    font-family: var(--parrafos);
+}
+
+.input-contacto input, .input-contacto textarea{
+    width: 100%;
+    outline: none;
+}
+
+.input-contacto textarea{
+    resize: none;
+}
+
+.input-contacto input[type="submit"]{
+    width: auto;
+    padding: 1rem 3rem;
+    transition: background-color .3s ease-in-out;
+}
+
+.input-contacto input[type="submit"]:hover{
+    background-color: var(--blanco);
+    color: var(--azulClaro);
+}
+
+#submit {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color:var(--negro);
+    border: none;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
